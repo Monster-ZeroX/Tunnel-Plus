@@ -1,8 +1,8 @@
 ﻿#!/bin/bash
 #====================================================
-#	SCRIPT: SSHPLUS MANAGER CONNECTION
-#   DATE:  Dec 28 2020
-#	TRANSLATED BY:	JENBHIE
+#	SCRIPT: Tunnel Plus
+#   DATE:  March 17 2021
+#	TRANSLATED BY:	Monster Zero
 #====================================================
 _lvk=$(wget -qO- https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/Install/version)
 IP=$(wget -qO- ipv4.icanhazip.com)
