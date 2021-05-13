@@ -1,10 +1,10 @@
 ﻿#!/bin/bash
 #====================================================
 #	SCRIPT: Tunnel Plus
-#   DATE:  March 17 2021
-#	SCRIPT BY:	Monster Zero
+#       DATE:  March 17 2021
+#	SCRIPT BY: Monster Zero
 #====================================================
-_lvk=$(wget -qO- https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/Install/version)
+_lvk=$(wget -qO- https://raw.githubusercontent.com/kaviya-admin/Tunnel-Plus/main/Install/version)
 IP=$(wget -qO- ipv4.icanhazip.com)
 IP2=$(wget -qO- http://whatismyip.akamai.com/)
 [[ "$IP" != "$IP2" ]] && ipdovps="$IP2" || ipdovps="$IP"
@@ -39,7 +39,7 @@ rm $_dir2/ShellBot.sh $_dir2/cabecalho $_dir2/open.py $_dir2/proxy.py >/dev/null
 _mdls=("addhost" "delhost" "alterarsenha" "criarusuario" "expcleaner" "mudardata" "remover" "criarteste" "verifbot" "droplimiter" "alterarlimite" "ajuda" "sshmonitor" "badvpn" "userbackup" "instsqd" "blockt" "otimizar" "menu" "speedtest" "banner" "senharoot" "reiniciarservicos" "reiniciarsistema" "attscript" "conexao" "delscript" "detalhes" "botssh" "infousers" "verifatt" "limiter" "uexpired" "cabecalho" "bot" "open.py" "proxy.py")
 for _arq in ${_mdls[@]}; do
 	[[ -e $_dir1/$_arq ]] && rm $_dir1/$_arq >/dev/null 2>&1
-	wget -c -P $_dir1 https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/Modules/$_arq
+	wget -c -P $_dir1 https://raw.githubusercontent.com/kaviya-admin/Tunnel-Plus/main/Modules/$_arq
 	chmod +x $_dir1/$_arq
 done
 mv $_dir1/cabecalho $_dir1/bot $_dir1/open.py $_dir1/proxy.py $_dir2
@@ -62,7 +62,7 @@ clear
 #AUTOMATIC START' >/etc/autostart
 	chmod +x /etc/autostart
 } || {
-	[[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && wget -qO- https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/Install/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
+	[[ $(ps x | grep "bot_plus" | grep -v grep | wc -l) != '0' ]] && wget -qO- https://raw.githubusercontent.com/kaviya-admin/Tunnel-Plus/main/Install/ShellBot.sh >/etc/SSHPlus/ShellBot.sh
 	for proc in $(ps x | grep 'dmS' | grep -v 'grep' | awk {'print $1'}); do
 		screen -r -S "$proc" -X quit
 	done
@@ -81,7 +81,7 @@ crontab -r >/dev/null 2>&1
 	echo "0 */6 * * * /bin/uexpired"
 ) | crontab -
 echo "$_lvk" | sed -n '1 p' | cut -d' ' -f2 >/bin/version && cat /bin/version >/home/sshplus
-wget https://github.com/jenbhie/SSH-PLUS-MANAGER/raw/main/Install/jq-linux64 >/dev/null 2>&1
+wget https://github.com/kaviya-admin/Tunnel-Plus/raw/main/Install/jq-linux64 >/dev/null 2>&1
 chmod +x jq-linux64 && mv jq-linux64 $(which jq)
 service cron restart >/dev/null 2>&1
 service ssh restart >/dev/null 2>&1
