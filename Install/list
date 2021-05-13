@@ -2,7 +2,7 @@
 #====================================================
 #	SCRIPT: Tunnel Plus
 #   DATE:  March 17 2021
-#	TRANSLATED BY:	Monster Zero
+#	SCRIPT BY:	Monster Zero
 #====================================================
 _lvk=$(wget -qO- https://raw.githubusercontent.com/jenbhie/SSH-PLUS-MANAGER/main/Install/version)
 IP=$(wget -qO- ipv4.icanhazip.com)
